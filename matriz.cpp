@@ -34,11 +34,19 @@ int main() {
             for (int j = 0; j < n; j++)
                 R[i][j] = A[i][j] - B[i][j];
     } else if (op == 'm') {
-        // Multiplicação
+        // Multiplicação de matrizes
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
                 for (int k = 0; k < n; k++)
                     R[i][j] += A[i][k] * B[k][j];
+    } else if (op == 'd') {
+        // Média dos elementos correspondentes
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                R[i][j] = (A[i][j] + B[i][j]) / 2;  // divisão inteira
+    } else {
+        cout << "Operação inválida!" << endl;
+        return 1;
     }
 
     // Imprime resultado
