@@ -13,5 +13,8 @@ int main() {
     cin >> n;
     if (ehPrimo(n)) cout << "Primo" << endl;
     else cout << "Não é primo" << endl;
+    int quadrado;
+    quadrado = n*n;
+    cout << quadrado;
     return 0;
 }
